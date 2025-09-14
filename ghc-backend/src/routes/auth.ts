@@ -72,7 +72,7 @@ auhtRouter.post("/login",async (req,res)=>{
     }
 
     const token = jwt.sign(
-        { userId: user.id, Role: user.role },
+        { userId: user.id, role: user.role },
         process.env.JWT_SECRET
     );
 
